@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI Screens Gallery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<section class="hero">
+  <h1>UI & App Screens Gallery</h1>
+  <p>
+    A modern gallery to organize and present user interface designs,
+    application screens, and digital product visuals in a clean,
+    professional layout.
+  </p>
+</section>
+
+<div class="upload-panel">
+  <select id="categorySelect">
+    <option value="">Select UI Category</option>
+    <option value="mobile-ui">Mobile App UI</option>
+    <option value="web-ui">Website UI</option>
+    <option value="dashboard">Dashboard UI</option>
+    <option value="auth">Login / Auth Screens</option>
+    <option value="concept">Design Concepts</option>
+  </select>
+
+  <div class="file-upload">
+    <span class="file-name" id="fileName">No file selected</span>
+    <label class="choose-btn">
+      Choose file
+      <input type="file" id="imageInput" accept="image/*">
+    </label>
+  </div>
+
+  <button id="uploadBtn" disabled>Upload</button>
+</div>
+
+<div class="filters">
+  <button class="active" data-filter="all">All</button>
+  <button data-filter="mobile-ui">Mobile UI</button>
+  <button data-filter="web-ui">Web UI</button>
+  <button data-filter="dashboard">Dashboard</button>
+  <button data-filter="auth">Auth Screens</button>
+  <button data-filter="concept">Concepts</button>
+</div>
+
+<div class="gallery-wrapper">
+  <div class="empty-state" id="emptyState">
+    No images uploaded yet. Uploaded UI screens will appear here.
+  </div>
+  <section class="gallery" id="gallery"></section>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #fff;
+}
+
+/* ================= HERO ================= */
+.hero {
+  text-align: center;
+  padding: 70px 20px 50px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+.hero p {
+  color: #c5cfdc;
+  margin-top: 12px;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ================= UPLOAD PANEL ================= */
+.upload-panel {
+  max-width: 980px;
+  margin: 40px auto 60px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr auto;
+  gap: 18px;
+}
+
+.upload-panel select {
+  background: #020617;
+  color: #fff;
+  border: 1px solid #334155;
+  padding: 13px;
+  border-radius: 10px;
+}
+
+/* ===== FILE UPLOAD ===== */
+.file-upload {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #020617;
+  border: 1px solid #334155;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.file-upload input {
+  display: none;
+}
+
+.file-name {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Choose file button */
+.choose-btn {
+  background: rgba(248,250,252,0.9);
+  color: #020617;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #cbd5e1;
+}
+
+.upload-panel button {
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  padding: 2px 22px;
+  border-radius: 10px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.upload-panel button:disabled {
+  background: #1e293b;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+/* ================= FILTERS ================= */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 9px 20px;
+  border-radius: 40px;
+  border: none;
+  background: #1e293b;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.filters button.active {
+  background: #38bdf8;
+  color: #020617;
+}
+
+/* ================= GALLERY ================= */
+.gallery-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  justify-content: center;
+  gap: 26px;
+  padding-bottom: 80px;
+}
+
+.gallery-item {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* ===== META ===== */
+.meta {
+  padding: 12px 14px;
+  border-top: 1px solid #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta .tag {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #38bdf8;
+}
+
+.meta .type {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  text-align: center;
+  color: #c2d4ec;
+  font-size: 0.9rem;
+  padding: 60px 20px;
+  display: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px) {
+  .upload-panel {
+    grid-template-columns: 1fr;
+  }
+}
